@@ -1,0 +1,16 @@
+AllCops:
+  TargetRubyVersion: 2.6
+  SuggestExtensions: false
+  NewCops: disable
+
+Layout/LineLength:
+  Max: 100
+
+Style/Documentation:
+  Enabled: false  
+
+Naming/FileName:
+  Exclude:
+    - lib/jekyll-react-component.rb  
+
+require: rubocop-rspec
