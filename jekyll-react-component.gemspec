@@ -8,13 +8,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Grzegorz Jakubiak']
   spec.email         = ['grzegorz.jakubiak@outlook.com']
 
-  spec.summary       = 'Write a short summary, because RubyGems requires one.'
-  spec.description   = 'Write a longer description or delete this line.'
+  spec.summary       = 'Simple gem adding `react_component` tag to jekyll'
   spec.homepage      = 'https://github.com/grzegorz-jakubiak/jekyll-react-component'
   spec.license       = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
-
-  spec.metadata['allowed_push_host'] = "Set to 'https://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/grzegorz-jakubiak/jekyll-react-component'
