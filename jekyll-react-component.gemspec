@@ -29,5 +29,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'activesupport', '~> 6.1', '>= 6.1.4.1'
   spec.add_dependency 'jekyll'
+  spec.add_dependency 'json-schema', '~> 2.8', '>= 2.8.1'
   spec.add_dependency 'nokogiri', '~> 1.12', '>= 1.12.3'
 end
