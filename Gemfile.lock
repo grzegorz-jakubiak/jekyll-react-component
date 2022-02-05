@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-react-component (0.1.1)
+    jekyll-react-component (0.1.2)
       activesupport (~> 6.1, >= 6.1.4.1)
       jekyll
       json-schema (~> 2.8, >= 2.8.1)
@@ -10,7 +10,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4.1)
+    activesupport (6.1.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -21,9 +21,9 @@ GEM
     ast (2.4.2)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
-    ffi (1.15.4)
+    ffi (1.15.5)
     forwardable-extended (2.6.0)
-    i18n (1.8.11)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     jekyll (3.6.3)
       addressable (~> 2.4)
@@ -44,12 +44,12 @@ GEM
       addressable (>= 2.4)
     kramdown (1.17.0)
     liquid (4.0.3)
-    listen (3.7.0)
+    listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    minitest (5.14.4)
-    nokogiri (1.12.5-x86_64-linux)
+    minitest (5.15.0)
+    nokogiri (1.13.1-x86_64-linux)
       racc (~> 1.4)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -90,7 +90,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   x86_64-linux

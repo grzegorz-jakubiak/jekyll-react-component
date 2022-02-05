@@ -5,16 +5,15 @@ require 'nokogiri'
 require_relative 'jekyll-react-component/react_component'
 require_relative 'jekyll-react-component/version'
 
-$react_component_pages_id = []
+REACT_COMPONENT_PAGES_ID = [] # rubocop:disable Style/MutableConstant
+REACT_COMPONENT_REGEX = /\{% react_component .+ %\}(.|\n)*\{% endreact_component %\}/.freeze
 
 Jekyll::Hooks.register [:pages, :posts], :pre_render do |page|
-  if page.content.match?(/\{% react_component .+ %\}(.|\n)*\{% endreact_component %\}/)
-    $react_component_pages_id << page.object_id
-  end
+  REACT_COMPONENT_PAGES_ID << page.object_id if page.content.match?(REACT_COMPONENT_REGEX)
 end
 
 Jekyll::Hooks.register [:pages, :posts], :post_render do |page|
-  if $react_component_pages_id.include?(page.object_id)
+  if REACT_COMPONENT_PAGES_ID.include?(page.object_id)
     html = page.output
     doc = Nokogiri::HTML(html)
     head = doc.at_css('head')
@@ -33,8 +32,8 @@ Jekyll::Hooks.register [:pages, :posts], :post_render do |page|
         </script>
       CODE
     end
-    
-    $react_component_pages_id.clear
+
+    REACT_COMPONENT_PAGES_ID.clear
     page.output = doc.to_html
   end
 end
